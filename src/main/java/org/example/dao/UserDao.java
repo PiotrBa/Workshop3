@@ -1,4 +1,4 @@
-package org.example;
+package org.example.dao;
 
 import org.mindrot.jbcrypt.BCrypt;
 
@@ -9,6 +9,8 @@ import java.sql.SQLException;
 import java.util.Arrays;
 
 public class UserDao {
+
+
     private static final String CREATE_USER_QUERY =
             "INSERT INTO users(username, email, password) VALUES (?, ?, ?)";
 
@@ -58,9 +60,9 @@ public class UserDao {
 
             if (rs.next()) {
                 User user = new User();
-                user.setId(rs.getInt(1));
-                user.setUserName(rs.getString(3));
-                user.setEmail(rs.getString(2));
+                user.setId(rs.getInt("id"));
+                user.setUserName(rs.getString("username"));
+                user.setEmail(rs.getString("email"));
                 return user;
             } else {
                 throw new NullPointerException("this id doesn't exist");

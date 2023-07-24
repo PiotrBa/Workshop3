@@ -1,4 +1,4 @@
-package org.example;
+package org.example.dao;
 
 public class User {
     private int id;
