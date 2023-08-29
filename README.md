@@ -36,3 +36,17 @@ This application is a simple user management system based on Servlet technology 
 ### **Database Operations related to User (UserDao)**
 - Allows creating, reading, updating, and deleting users in the database.
 - User passwords are hashed using the BCrypt library before being saved to the database.
+
+## **Technical Details**
+
+- **Java Version**: 11
+- **Packaging**: `war`
+
+### **Frameworks & Libraries**
+
+- **Servlet**: Version `4.0.1`
+- **JSTL**: Version `1.2`
+- **JBcrypt**: Version `0.4`
+- **Log4j**: Versions `2.14.1` (API) and `2.17.1` (Core)
+- **MySQL Connector/J**: Version `8.0.33`
+
